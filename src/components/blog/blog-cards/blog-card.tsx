@@ -1,13 +1,22 @@
 import BlogCard from "./card";
 
+interface IBlogData {
+    slug: string;       // Slug for the blog (for URL)
+    description: string; // Description for the card
+    date: string;        // Date of the blog post
+    fullTitle: string;   // Full title of the blog
+    imageUrl: string;    // Image URL for the blog
+    author: string;      // Author of the blog
+}
 
-const blogData = [
+
+const blogData:IBlogData[] = [
     {
         slug: 'software-development',
         description: 'Building robust and scalable software solutions to help businesses grow.',
         date: '15/02/2024',
         fullTitle: 'The Future of Software Development: Trends & Predictions',
-        imageUrl: '/images/software.jpeg',
+        imageUrl: '/images/software.png',
         author: 'John Doe',
     },
     {
@@ -100,30 +109,6 @@ const blogData = [
         author: 'Isabella Taylor',
     },
     {
-        slug: 'digital-marketing',
-        description: 'Understanding the digital marketing landscape and strategies.',
-        date: '18/05/2024',
-        fullTitle: 'Digital Marketing: Navigating the Future of Business Promotion',
-        imageUrl: '/images/digital.jpeg',
-        author: 'James Miller',
-    },
-    {
-        slug: '5g-technology',
-        description: 'The potential of 5G technology in transforming communication.',
-        date: '25/05/2024',
-        fullTitle: '5G Technology: Revolutionizing Connectivity and Communication',
-        imageUrl: '/images/5g.jpeg',
-        author: 'Charlotte Lee',
-    },
-    {
-        slug: 'edge-computing',
-        description: 'The growing significance of edge computing in processing data.',
-        date: '30/05/2024',
-        fullTitle: 'Edge Computing: The Future of Decentralized Data Processing',
-        imageUrl: '/images/edge.jpeg',
-        author: 'Daniel King',
-    },
-    {
         slug: 'quantum-computing',
         description: 'The promises and challenges of quantum computing in the future.',
         date: '05/06/2024',
@@ -148,23 +133,12 @@ const blogData = [
         imageUrl: '/images/vehicle.jpeg',
         author: 'Mason Clark',
     },
-
-    {
-        slug: 'voice-assistants',
-        description: 'The growing role of voice assistants in everyday technology.',
-        date: '09/07/2024',
-        fullTitle: 'Voice Assistants: Shaping the Future of Human-Technology Interaction',
-        imageUrl: '/images/voice.jpeg',
-        author: 'Lucas Evans',
-    },
-
-
 ];
 
 
 const BlogList = () => {
     return (
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="flex mx-10 gap-12 flex-wrap justify-center items-center py-8 mt-10">
             {blogData.map((blog) => (
                 <BlogCard
                     key={blog.slug}

@@ -5,13 +5,42 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   font-family: 'Figtree', sans-serif;
   background-color: #00000d;
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
+
+body::after {
+  content: "";
+  position: fixed; /* Ensure it stays fixed to the viewport */
+  top: 0%; /* Center vertically */
+  left: -10%; /* Center horizontally */
+  width: 120vw; /* Slightly larger than the viewport width */
+  height: 120vh; /* Slightly larger than the viewport height */
+  background-image: url('/images/bground.png'),linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; /* Prevent overflow */
+  animation: rotate-animation 92s linear infinite; /* Smooth rotation */
+  z-index: -1; /* Place behind all content */
+  pointer-events: none;
+}
+
+
+@keyframes rotate-animation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
 
 h1, h2, h3 {
   font-family: 'Figtree', sans-serif;

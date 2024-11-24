@@ -5,11 +5,11 @@ export default function HeroSection() {
     return (
         <main className=" bg-cover bg-center grid grid-cols-1 md:grid-cols-2">
             {/* Left Side */}
-            <div className="px-3 sm:px-8 py-10 md:px-6 md:py-8 lg:px-12 lg:py-16 flex flex-col justify-center items-center md:items-start order-2 md:order-1">
-                <h5 className="text-sm sm:text-lg lg:text-xl font-semibold text-[#94d533] text-center md:text-left">
+            <div className="px-3 sm:px-8 pt-6 pb-4 md:px-6 md:py-8 lg:px-12 lg:py-16 flex flex-col justify-center items-center md:items-start order-2 md:order-1">
+                <h5 className="text-lg lg:text-xl font-semibold text-[#94d533] text-center md:text-left">
                     TechTrans: Innovating IT Solutions for Growth
                 </h5>
-                <h1 className="text-2xl text-start sm:text-3xl lg:text-5xl font-bold text-[#f2f2f4] mt-4 sm:text-center md:text-left">
+                <h1 className="text-2xl text-start sm:text-3xl lg:text-4xl font-bold text-[#f2f2f4] mt-4 sm:text-center md:text-left">
                 Transforming Businesses with <span className="text-[#94d533]">Advanced Technology</span> for the Next Generation
 
                 </h1>

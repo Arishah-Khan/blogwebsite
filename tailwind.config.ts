@@ -57,14 +57,21 @@ const config: Config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
 		  keyframes: {
-			marquee: {
-				'0%': { transform: 'translateX(0)' },
-				'100%': { transform: 'translateX(-100%)' },
+			// Rotating background animation keyframes
+			'rotate-animation': {
+			  '0%': { transform: 'rotate(0deg)' },
+			  '100%': { transform: 'rotate(360deg)' },
 			},
-		},
-		animation: {
-			marquee: 'marquee 40s linear infinite', // Define animation
-		},
+			marquee: {
+			  '0%': { transform: 'translateX(0)' },
+			  '100%': { transform: 'translateX(-100%)' },
+			},
+		  },
+		  animation: {
+			// Applying rotating background animation to the body
+			'rotate-animation': 'rotate-animation 92s linear infinite', // 92s for continuous rotation
+			marquee: 'marquee 40s linear infinite',
+		  },
   	}
   },
   plugins: [require("tailwindcss-animate")],
